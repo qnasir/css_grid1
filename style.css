@@ -1,0 +1,82 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+body {
+  background-color: gray;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  font-size: 100px;
+  color: rgb(60, 243, 182);
+}
+
+.container {
+  width: 60%;
+  margin: 2rem auto; 
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  /* grid-gap: 1.5rem;  */
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
+}
+
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery__item--2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-image: url("https://img.freepik.com/free-photo/girl-sky_1340-27755.jpg");
+  background-size: 100%;
+}
+
+.gallery__item--3 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+  background: url("https://as2.ftcdn.net/v2/jpg/05/48/61/57/1000_F_548615771_2YsHDcTZM82lhMeVHeYYkshLMT8mOwjK.jpg");
+  background-size: 85%;
+  background-position-x: center;
+  /* background-repeat: no-repeat;
+  background-position: center; */
+}
+
+.gallery__item--4 {
+  grid-column: 1 / span 4;
+  grid-row: 3 / span 3;
+}
+
+.gallery__item--5 {
+ grid-column: 1 / span 4;
+ grid-row: 6 / span 3;
+}
+
+.gallery__item--6 {
+ grid-column: 5 / span 4;
+ grid-row: 6 / span 3;
+}
